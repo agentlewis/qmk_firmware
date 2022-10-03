@@ -20,12 +20,14 @@ enum layers {
     _QWERTY,
     _LOWER,
     _RAISE,
+    _ADJUST,
 };
 
 enum custom_keycodes {
     QWERTY = SAFE_RANGE,
     LOWER,
     RAISE,
+    ADJUST,
 };
 
 #define EISU LALT(KC_GRV)
@@ -84,6 +86,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_LSFT, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_LPRN,                        KC_RPRN,  KC_QUES, KC_PLUS, KC_LT,   KC_GT,   KC_QUES, KC_PGUP,
     KC_LCTL, KC_LALT, KC_TILD, RAISE,            KC_LGUI, KC_BSPC, KC_DEL,        KC_ENT, KC_SPC,   KC_RGUI,          LOWER,   KC_AT,   KC_HASH, KC_PGDN
   ),
+
     /* Adjust
    * ,----------------------------------------------------------------------------------------------------------------------.
    * |      | Reset|RGB ON|  MODE|  HUE-|  HUE+|      |                    |      |  SAT-|  SAT+|  VAL-|  VAL+|      |      |
