@@ -57,15 +57,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |------+------+------+------+------+------+------+--------------------+------+------+------+------+------+------+------|
    * | Ctrl |   ^  |   &  |   *  |   (  |   )  |   <  |                    |   >  | End  | Left | Down |  Up  | Right|  End |
    * |------+------+------+------+------+------+---------------------------+------+------+------+------+------+------+------|
-   * | Shift|   !  |   @  |   #  |   $  |   %  |   (  |                    |   )  |   ?  |   =  |   <  |   >  |   ?  |PageUp|
+   * | Shift|   !  |   @  |   #  |   $  |   %  |   (  |                    |   )  |   _  |   =  |   <  |   >  |   ?  |PageUp|
    * |-------------+------+------+------+------+------+------+------+------+------+------+------+------+------+-------------|
    * | Ctrl |  Alt |   ~  | RAISE||||||||  GUI | Raise| Space|||||||| Enter| Space|  Gui |||||||| Lower|   @  |   #  |PageDN|
    * ,----------------------------------------------------------------------------------------------------------------------.
    */
   [_LOWER] = LAYOUT(
-    KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_LBRC,                        KC_RBRC,  KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_PIPE,
-    KC_TAB,  KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_LPRN,                        KC_RPRN,  KC_HOME, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_END,
-    KC_LSFT, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_9,                           KC_0,     KC_QUES, KC_EQL,  KC_LT,   KC_GT,   KC_QUES, KC_PGUP,
+    KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    S(KC_W),                       S(KC_E),  KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_PIPE,
+    KC_TAB,  KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, S(KC_MINS),                    S(KC_EQL),  KC_HOME, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_END,
+    KC_LSFT, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_9,                           KC_0,     S(KC_QUOT), KC_RBRC,  S(KC_W), S(KC_E), S(KC_Z), KC_PGUP,
     KC_LCTL, KC_LALT, KC_GRV, KC_DEL,            KC_LGUI, KC_BSPC, RAISE,         KC_ENT, KC_SPC,   KC_RGUI,          LOWER,   KC_AT,   KC_HASH, KC_PGDN
   ),
 
@@ -75,15 +75,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |------+------+------+------+------+------+------+--------------------+------+------+------+------+------+------+------|
    * | Ctrl |   ^  |   &  |   *  |   (  |   )  |   -  |                    |   +  | End  | Left | Down |  Up  | Right|  End |
    * |------+------+------+------+------+------+---------------------------+------+------+------+------+------+------+------|
-   * | Shift|   !  |   @  |   #  |   $  |   %  |   {  |                    |   }  |   _  |   +  |   <  |   >  |   ?  |PageUp|
+   * | Shift|   !  |   @  |   #  |   $  |   %  |   {  |                    |   }  |   -  |   +  |   /  |  *   |   ?  |PageUp|
    * |-------------+------+------+------+------+------+------+------+------+------+------+------+------+------+-------------|
    * | Ctrl |  Alt |  ~   | RAISE||||||||  GUI | Raise| Space|||||||| Enter| Space|  Gui |||||||| Lower|   @  |   #  |PageDN|
    * ,----------------------------------------------------------------------------------------------------------------------.
   */
   [_RAISE] = LAYOUT(
-    KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_COMM,                        KC_DOT,   KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_LBRC,
+    KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    S(KC_W),                        S(KC_E),  KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_LBRC,
     KC_TAB,  KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_LPRN,                        KC_RPRN,  KC_HOME, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_END,
-    KC_LSFT, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_9,                           KC_0,     KC_QUOT, KC_PLUS, KC_COMM, KC_DOT,  KC_LBRC, KC_PGUP,
+    KC_LSFT, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_9,                           KC_0,     KC_QUOT, S(KC_RBRC), KC_LBRC, S(KC_8), S(KC_LBRC), KC_PGUP,
     KC_LCTL, KC_LALT, KC_GRV, KC_DEL,            KC_LGUI, KC_BSPC, RAISE,         KC_ENT, KC_SPC,   KC_RGUI,          LOWER,   KC_AT,   KC_HASH, KC_PGDN
   ),
 
